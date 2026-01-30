@@ -6,7 +6,7 @@
 
 ## Data availability
 
-This repository does **not** contain raw neuroimaging or behavioural data. This work was finished almost a year and a half ago, but much of that time was spent waiting at the editorial stage rather than in peer review. Glad to be able to share, but note that as a result, my memory may be foggy on some of the example derivatives used in the paper provided under `/derivatives`.
+This repository does **not** contain raw neuroimaging or behavioural data. This work was finished almost a year and a half ago, but much of that time was spent waiting at the editorial decision stages rather than in peer review. Glad to be able to share, but note that as a result, my memory may be foggy on some of the example derivatives used in the paper provided under `/derivatives`.
 
 To reproduce the full analyses, users will need:
 
