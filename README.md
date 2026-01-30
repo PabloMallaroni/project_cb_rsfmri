@@ -1,39 +1,46 @@
+## Code and derivatives accompanying the paper
 
-## Code and derivatives accompanying the paper: "Spatiotemporal mapping of brain organisation following the administration of 2C-B and psilocybin" - Molecular Psychiatry (accepted).
+**Spatiotemporal mapping of brain organisation following the administration of 2C-B and psilocybin**  
+*Molecular Psychiatry* (accepted)
 
 
 ## Data availability
 
-This repository does **not** contain raw neuroimaging or behavioural data. This work was finished almost a year and a half ago, but much of that time was spent waiting at the editorial stage rather than in peer review. Glad to be able to share, but note that as a result, my memory may be foggy on some of the example derivatives used in the paper provided under `/derivatives`. 
+This repository does **not** contain raw neuroimaging or behavioural data. This work was finished almost a year and a half ago, but much of that time was spent waiting at the editorial stage rather than in peer review. Glad to be able to share, but note that as a result, my memory may be foggy on some of the example derivatives used in the paper provided under `/derivatives`.
 
 To reproduce the full analyses, users will need:
+
 - Preprocessed, parcellated resting-state fMRI time series  
 - PET-derived receptor and transporter density maps (parcellated)  
 - Behavioural and questionnaire data  
-
+- Matlab/python
 For raw data, you can contact the corresponding author to set up a DSA upon reasonable request.
+
+
 
 ## Usage notes
 
 - Scripts are study-specific and require manual adjustment of paths.
-- Analyses are provided individually rather than as a single pipeline, so they can be used in a modular way. 
+- Analyses are provided individually rather than as a single pipeline so that they can be used in a modular way.
 - The code is shared for transparency and reproducibility rather than as a general-purpose toolbox.
+
+
 
 ## What this code does
 
 This repository contains the analysis code used in the paper to quantify drug-induced changes in resting-state functional brain organisation under 2C-B and psilocybin. The code implements the following analyses:
 
-# Functional connectivity
+### Functional connectivity
+
 - **Static functional connectivity (sFC)**  
-  Computes pairwise Pearson correlations between parcellated resting-state fMRI time series, followed by Fisher z-transformation.
+  Computes pairwise Pearson correlations between parcellated resting-state fMRI time series, followed by Fisher z-transformation as well as its nodal derivative global FC.
 
 - **Dynamic functional connectivity (dFC)**  
   Estimates time-varying connectivity using framewise conditional correlations and quantifies variance of connectivity fluctuations across time.
 
-- **Global functional connectivity (gFC)**  
-  Computes mean connectivity strength per region as a nodal summary measure.
 
-# Signal complexity
+### Signal complexity
+
 - **Sample entropy (sampEn)**  
   Computes regional BOLD signal complexity using fixed parameters (m = 2, r = 0.3 × SD).
 
@@ -43,11 +50,16 @@ This repository contains the analysis code used in the paper to quantify drug-in
 - **Degree-distribution entropy (degreeEn)**  
   Quantifies entropy of graph degree distributions as a complementary complexity metric.
 
-# Multivariate integration
+- **Dynamic connectivity entropy (dccEn)**  
+  Computes Shannon entropy of dynamic conditional correlation time series, providing an edge-wise measure of variability in functional connectivity dynamics.
+
+### Multivariate integration
+
 - **Regional multivariate coherence**  
   Integrates static connectivity, dynamic connectivity variance, and entropy measures to quantify how consistently regions respond across metrics.
 
-# Statistical inference
+### Statistical inference
+
 - **Network-Based Statistics (NBS)**  
   Identifies connected components of edges showing significant drug effects in a repeated-measures design.
 
@@ -57,15 +69,18 @@ This repository contains the analysis code used in the paper to quantify drug-in
 - **Multilevel partial least squares (PLS)**  
   Relates drug-induced changes in brain organisation to subjective experience measures while accounting for within-subject drug contrasts.
 
-# Pharmacology-informed mapping
+### Pharmacology-informed mapping
+
 - **Dominance analysis with PET maps**  
   Quantifies the relative contribution of PET-derived receptor and transporter density maps to the spatial distribution of drug effects.
 
 
-## Additional dependencies:
-- `pyls` (https://github.com/rmarkello/pyls)
--`COPBET` (https://github.com/anders-s-olsen/CopBET)
--`rotate_parcellation` (https://github.com/frantisekvasa/rotate_parcellation)
+## Additional dependencies
+- `NBS` — https://www.nitrc.org/projects/nbs/
+- `pyls` — https://github.com/rmarkello/pyls  
+- `COPBET` — https://github.com/anders-s-olsen/CopBET  
+- `rotate_parcellation` — https://github.com/frantisekvasa/rotate_parcellation  
+
 
 ## Citation
 
@@ -84,5 +99,5 @@ A DOI will be added once available.
 For questions regarding the code or analyses:
 
 **Pablo Mallaroni**  
-p.mallaroni@ic.ac.uk
+p.mallaroni@ic.ac.uk  
 p.mallaroni@maastrichtuniversity.nl
