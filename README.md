@@ -1,10 +1,6 @@
 
 ## Code and derivatives accompanying the paper: "Spatiotemporal mapping of brain organisation following the administration of 2C-B and psilocybin" - Molecular Psychiatry (accepted).
 
-Additional dependencies:
-- `pyls` (https://github.com/rmarkello/pyls)
--`COPBET` (https://github.com/anders-s-olsen/CopBET)
--`rotate_parcellation` (https://github.com/frantisekvasa/rotate_parcellation)
 
 ## Data availability
 
@@ -19,10 +15,57 @@ For raw data, you can contact the corresponding author to set up a DSA upon reas
 
 ## Usage notes
 
-- Scripts are study-specific and require manual adjustment of paths and inputs.
-- Analyses were executed selectively rather than as a single pipeline.
+- Scripts are study-specific and require manual adjustment of paths.
+- Analyses are provided individually rather than as a single pipeline, so they can be used in a modular way. 
 - The code is shared for transparency and reproducibility rather than as a general-purpose toolbox.
-- 
+
+## What this code does
+
+This repository contains the analysis code used in the paper to quantify drug-induced changes in resting-state functional brain organisation under 2C-B and psilocybin. The code implements the following analyses:
+
+# Functional connectivity
+- **Static functional connectivity (sFC)**  
+  Computes pairwise Pearson correlations between parcellated resting-state fMRI time series, followed by Fisher z-transformation.
+
+- **Dynamic functional connectivity (dFC)**  
+  Estimates time-varying connectivity using framewise conditional correlations and quantifies variance of connectivity fluctuations across time.
+
+- **Global functional connectivity (gFC)**  
+  Computes mean connectivity strength per region as a nodal summary measure.
+
+# Signal complexity
+- **Sample entropy (sampEn)**  
+  Computes regional BOLD signal complexity using fixed parameters (m = 2, r = 0.3 × SD).
+
+- **Lempel–Ziv complexity (zivEn)**  
+  Computes whole-brain signal complexity from binarised time series.
+
+- **Degree-distribution entropy (degreeEn)**  
+  Quantifies entropy of graph degree distributions as a complementary complexity metric.
+
+# Multivariate integration
+- **Regional multivariate coherence**  
+  Integrates static connectivity, dynamic connectivity variance, and entropy measures to quantify how consistently regions respond across metrics.
+
+# Statistical inference
+- **Network-Based Statistics (NBS)**  
+  Identifies connected components of edges showing significant drug effects in a repeated-measures design.
+
+- **Regional statistical models**  
+  Performs linear mixed-effects analyses and post-hoc contrasts on nodal measures with multiple-comparison correction.
+
+- **Multilevel partial least squares (PLS)**  
+  Relates drug-induced changes in brain organisation to subjective experience measures while accounting for within-subject drug contrasts.
+
+# Pharmacology-informed mapping
+- **Dominance analysis with PET maps**  
+  Quantifies the relative contribution of PET-derived receptor and transporter density maps to the spatial distribution of drug effects.
+
+
+## Additional dependencies:
+- `pyls` (https://github.com/rmarkello/pyls)
+-`COPBET` (https://github.com/anders-s-olsen/CopBET)
+-`rotate_parcellation` (https://github.com/frantisekvasa/rotate_parcellation)
 
 ## Citation
 
