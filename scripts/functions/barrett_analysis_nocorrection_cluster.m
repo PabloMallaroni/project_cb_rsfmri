@@ -1,4 +1,4 @@
-function Barrett_analysis_no_correction(ts,sesidx,savedir,datastream,iter)
+function Barrett_analysis_no_correction_cluster(ts,sesidx,savedir,datastream,iter)
 
 %  kept exact CopBET to instead take single TS and opperate within parfor loop,
 % saving outputs including disp along the way.
