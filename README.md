@@ -1,12 +1,12 @@
 ## Code and derivatives accompanying the paper
 
 **Spatiotemporal mapping of brain organisation following the administration of 2C-B and psilocybin**  
-*Molecular Psychiatry* (accepted)
-
+*Molecular Psychiatry* 
+https://www.nature.com/articles/s41380-026-03447-0
 
 ## Data availability
 
-This repository does **not** contain raw neuroimaging or behavioural data. This work was finished almost a year and a half ago, but much of that time was spent waiting at the editorial decision stages rather than in peer review. Glad to be able to share, but note that as a result, my memory may be foggy on some of the example derivatives used in the paper provided under `/derivatives`.
+This repository does **not** contain raw neuroimaging or behavioural data. This work was finished almost a year and a half ago, but much of that time was spent waiting at the editorial decision stages rather than in peer review. Glad to be able to share, but note that as a result, the example derivatives used in the paper provided under `/derivatives` need to be extended and cleared up.
 
 To reproduce the full analyses, users will need:
 
@@ -87,11 +87,10 @@ This repository contains the analysis code used in the paper to quantify drug-in
 
 If you use this code, please cite:
 
-> Mallaroni P, Singleton SP, Mason NL, Satterthwaite TD, Ramaekers JG.  
-> *Spatiotemporal mapping of brain organisation following the administration of 2C-B and psilocybin*.  
-> Molecular Psychiatry (accepted).
+Mallaroni, P., Singleton, S.P., Mason, N.L. et al. 
+Spatiotemporal mapping of brain organisation following the administration of 2C-B and psilocybin. Mol Psychiatry (2026). 
+https://doi.org/10.1038/s41380-026-03447-0
 
-A DOI will be added once available.
 
 ---
 
