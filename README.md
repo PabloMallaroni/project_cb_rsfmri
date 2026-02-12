@@ -6,7 +6,7 @@ https://www.nature.com/articles/s41380-026-03447-0
 
 ## Data availability
 
-This repository does **not** contain raw neuroimaging or behavioural data. This work was finished almost a year and a half ago, but much of that time was spent waiting at the editorial decision stages rather than in peer review. Glad to be able to share, but note that, as a resul,t for example, the derivatives used in the paper provided under `/derivatives` are a bit fuzzy and need to be cleaned up.
+This repository does **not** contain raw neuroimaging or behavioural data. This work was finished almost a year and a half ago. Glad to be able to share, but note that, as a result, for example, the example derivatives used in the paper provided under `/derivatives` are a bit fuzzy.
 
 To reproduce the full analyses, users will need:
 
